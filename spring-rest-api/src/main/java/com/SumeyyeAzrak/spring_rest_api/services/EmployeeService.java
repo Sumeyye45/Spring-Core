@@ -1,5 +1,6 @@
 package com.SumeyyeAzrak.spring_rest_api.services;
 
+import com.SumeyyeAzrak.spring_rest_api.dtos.UpdateEmployeeRequest;
 import com.SumeyyeAzrak.spring_rest_api.model.Employee;
 import com.SumeyyeAzrak.spring_rest_api.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,4 +39,14 @@ public class EmployeeService {
         return employeeRepository.deleteEmployee(id);
 
     }
+
+    public Employee updateEmployee(String id, UpdateEmployeeRequest request){
+
+        return employeeRepository.updateEmployee(id, request);
+    }
+
+
+
+
+
 }

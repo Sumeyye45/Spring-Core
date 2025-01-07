@@ -1,5 +1,6 @@
 package com.SumeyyeAzrak.spring_rest_api.repository;
 
+import com.SumeyyeAzrak.spring_rest_api.dtos.UpdateEmployeeRequest;
 import com.SumeyyeAzrak.spring_rest_api.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -82,6 +83,22 @@ public class EmployeeRepository {
         }
         employeeList.remove(deleteEmployee);
         return true;
+    }
+
+    public Employee updateEmployee(String id, UpdateEmployeeRequest request){
+
+        Employee updateEmployee = null;
+        for(Employee employee : employeeList){
+            if(id.equals(employee.getId())){
+                employee.setFirstName(request.getFirstName());
+                employee.setLastName(request.getLastName());
+                updateEmployee = employee;
+                break;
+            }
+        }
+
+
+        return updateEmployee;
     }
 
 

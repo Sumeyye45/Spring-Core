@@ -1,5 +1,6 @@
 package com.SumeyyeAzrak.spring_rest_api.controller;
 
+import com.SumeyyeAzrak.spring_rest_api.dtos.UpdateEmployeeRequest;
 import com.SumeyyeAzrak.spring_rest_api.model.Employee;
 import com.SumeyyeAzrak.spring_rest_api.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,14 @@ public class RestEmployeeController {
 
         return employeeService.deleteEmployee(id);
     }
+
+
+    @PutMapping(path = "/update-employee/{id}")
+    public Employee updateEmployee(@PathVariable(name = "id") String id, @RequestBody UpdateEmployeeRequest request){
+        return  employeeService.updateEmployee(id, request);
+    }
+
+
 
 
 }
