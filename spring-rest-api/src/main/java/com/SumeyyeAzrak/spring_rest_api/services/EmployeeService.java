@@ -15,27 +15,27 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    public List<Employee> getAllEmployeeList(){
+    public List<Employee> getAllEmployeeList() {
 
         return employeeRepository.getAllEmployeeList();
     }
 
-    public Employee getEmployeeById(String id){
-      return   employeeRepository.getEmployeeById(id);
+    public Employee getEmployeeById(String id) {
+        return employeeRepository.getEmployeeById(id);
     }
 
-    public List<Employee> getEmployeeWithParams(String firstName, String lastName){
+    public List<Employee> getEmployeeWithParams(String firstName, String lastName) {
         return employeeRepository.getEmployeeWithParams(firstName, lastName);
     }
 
-    public Employee saveEmployee(Employee newEmployee){
+    public Employee saveEmployee(Employee newEmployee) {
         return employeeRepository.saveEmployee(newEmployee);
     }
 
 
-    public boolean deleteEmployee(String id){
+    public boolean deleteEmployee(String id) {
 
-        return  employeeRepository.deleteEmployee(id);
+        return employeeRepository.deleteEmployee(id);
 
     }
 }

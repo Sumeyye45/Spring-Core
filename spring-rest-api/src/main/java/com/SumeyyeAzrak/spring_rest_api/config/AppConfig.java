@@ -12,15 +12,15 @@ import java.util.List;
 public class AppConfig {
 
     @Bean
-    public List<Employee> employeeList(){
+    public List<Employee> employeeList() {
 
         List<Employee> employeeList = new ArrayList<>();
-        employeeList.add(new Employee("1", "Sumeyye", "Azrak" ));
-        employeeList.add(new Employee("2", "Aysel", "Azrak" ));
-        employeeList.add(new Employee("3", "Ali", "Azrak" ));
-        employeeList.add(new Employee("4", "Akif", "Azrak" ));
-        employeeList.add(new Employee("5", "Akif", "Kaya" ));
-        employeeList.add(new Employee("6", "Akif", "Azrak" ));
+        employeeList.add(new Employee("1", "Sumeyye", "Azrak"));
+        employeeList.add(new Employee("2", "Aysel", "Azrak"));
+        employeeList.add(new Employee("3", "Ali", "Azrak"));
+        employeeList.add(new Employee("4", "Akif", "Azrak"));
+        employeeList.add(new Employee("5", "Akif", "Kaya"));
+        employeeList.add(new Employee("6", "Akif", "Azrak"));
 
 
         return employeeList;
