@@ -31,6 +31,11 @@ public class StudentControllerImpl implements IStudentController {
     public Student getStudentById(@PathVariable(name = "id") int id) {
         return studentService.getStudentById(id);
     }
+    @DeleteMapping(path = "/delete/{id}")
+    @Override
+    public void deleteStudent(@PathVariable(name = "id") int id) {
+        studentService.deleteStudent(id);
+    }
 
 
 }

@@ -11,4 +11,6 @@ public interface IStudentService {
     public List<Student> getAllStudents();
 
     public Student getStudentById(int id);
+
+    public void deleteStudent(int id);
 }

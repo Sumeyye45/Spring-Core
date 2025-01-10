@@ -12,4 +12,6 @@ public interface IStudentController {
 
    public Student getStudentById(int id);
 
+   public void deleteStudent(int id);
+
 }
