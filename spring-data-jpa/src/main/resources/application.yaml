@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: spring-data-jpa
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: update
+      open-in-view: false
+
+
+
+
+
+
