@@ -1,6 +1,8 @@
 package com.SumeyyeAzrak.controller.impl;
 
 import com.SumeyyeAzrak.controller.IStudentController;
+import com.SumeyyeAzrak.dto.DtoStudent;
+import com.SumeyyeAzrak.dto.DtoStudentIU;
 import com.SumeyyeAzrak.entites.Student;
 import com.SumeyyeAzrak.services.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,28 +20,29 @@ public class StudentControllerImpl implements IStudentController {
 
     @Override
     @PostMapping(path = "/save")
-    public Student saveStudent(@RequestBody Student student) {
-        return studentService.saveStudent(student);
+    public DtoStudent saveStudent(@RequestBody DtoStudentIU dtoStudentIU) {
+        return studentService.saveStudent(dtoStudentIU);
     }
     @GetMapping(path = "/list")
     @Override
-    public List<Student> getAllStudents() {
+    public List<DtoStudent> getAllStudents() {
         return studentService.getAllStudents();
     }
     @GetMapping(path = "/list/{id}")
     @Override
-    public Student getStudentById(@PathVariable(name = "id") int id) {
-        return studentService.getStudentById(id);
+    public DtoStudent getStudentById(@PathVariable(name = "id") int id) {
+      return studentService.getStudentById(id);
     }
     @DeleteMapping(path = "/delete/{id}")
     @Override
     public void deleteStudent(@PathVariable(name = "id") int id) {
         studentService.deleteStudent(id);
     }
+
     @PutMapping(path = "/update/{id}")
     @Override
-    public Student updateStudent(@PathVariable(name = "id") int id, @RequestBody Student updateStudent) {
-        return studentService.updateStudent(id, updateStudent);
+    public DtoStudent updateStudent(@PathVariable(name = "id") int id, @RequestBody DtoStudentIU dtoStudentIU) {
+        return studentService.updateStudent(id, dtoStudentIU);
     }
 
 
