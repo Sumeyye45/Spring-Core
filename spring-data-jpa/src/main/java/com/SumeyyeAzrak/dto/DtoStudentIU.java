@@ -7,8 +7,8 @@ import lombok.Setter;
 
 import java.util.Date;
 
-//@Getter
-//@Setter
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class DtoStudentIU {
@@ -19,27 +19,4 @@ public class DtoStudentIU {
 
     private Date birthOfDate;
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public Date getBirthOfDate() {
-        return birthOfDate;
-    }
-
-    public void setBirthOfDate(Date birthOfDate) {
-        this.birthOfDate = birthOfDate;
-    }
 }

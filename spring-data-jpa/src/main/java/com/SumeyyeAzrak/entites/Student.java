@@ -11,8 +11,8 @@ import java.util.Date;
 @Table(name = "student")
 @NoArgsConstructor
 @AllArgsConstructor
-//@Getter
-//@Setter
+@Getter
+@Setter
 
 public class Student {
 
@@ -29,35 +29,5 @@ public class Student {
     @Column(name = "birth_of_date", nullable = true)
     private Date birthOfDate;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public Date getBirthOfDate() {
-        return birthOfDate;
-    }
-
-    public void setBirthOfDate(Date birthOfDate) {
-        this.birthOfDate = birthOfDate;
-    }
 }
