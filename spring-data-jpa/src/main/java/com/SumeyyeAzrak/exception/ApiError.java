@@ -16,28 +16,4 @@ public class ApiError <T> {
     private Date errorTime;
 
     private T errors;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Date getErrorTime() {
-        return errorTime;
-    }
-
-    public void setErrorTime(Date errorTime) {
-        this.errorTime = errorTime;
-    }
-
-    public T getErrors() {
-        return errors;
-    }
-
-    public void setErrors(T errors) {
-        this.errors = errors;
-    }
 }
