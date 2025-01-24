@@ -8,8 +8,8 @@ import lombok.Setter;
 
 import java.util.Date;
 
-//@Getter
-//@Setter
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class DtoStudentIU {
@@ -31,45 +31,4 @@ public class DtoStudentIU {
     @NotEmpty(message = "tckn alanı boş geçilemez.")
     private String tckn;
 
-
-
-    public String getTckn() {
-        return tckn;
-    }
-
-    public void setTckn(String tckn) {
-        this.tckn = tckn;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public Date getBirthOfDate() {
-        return birthOfDate;
-    }
-
-    public void setBirthOfDate(Date birthOfDate) {
-        this.birthOfDate = birthOfDate;
-    }
 }
