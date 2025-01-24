@@ -28,5 +28,4 @@ public class Student {
     @JsonFormat(pattern = "yyyy-MM-dd")
     @Column(name = "birth_of_date", nullable = true)
     private Date birthOfDate;
-
 }
